@@ -12,7 +12,8 @@
     </li>
     <li class="nav-item">
         <a class="nav-link <?php if($_GET['p'] == 'tipo' || 
-                                        $_GET['p'] == 'cad-tipo'){ echo'active';  } ?>" 
+                                        $_GET['p'] == 'cad-tipo' ||
+                                        $_GET['p'] == 'fim-cad-tipo'){ echo'active';  } ?>" 
                                         href="area-tipo.php?p=tipo">
             <i class="fa fa-id-card"></i> Área de Tipos
         </a>

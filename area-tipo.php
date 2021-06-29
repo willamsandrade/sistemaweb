@@ -1,3 +1,19 @@
+<?php
+    //Incluir classe de conexão
+    require_once"classes/DAO/Conexao.class.php";
+    //Incluir entidade Tipo
+    require_once"classes/entidades/Tipo.class.php"; 
+    //Incluir TipoDAO
+    require_once"classes/DAO/TipoDAO.class.php";
+
+     //Criar instâncias 
+     $Tipo = new Tipo();
+     $TipoDAO = new TipoDAO();
+     
+     //Listar os Tipos cadastrados no banco
+     $tipos  = $TipoDAO->lerTodos();
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -22,6 +38,38 @@
         <a href="cadastro-tipo.php?p=cad-tipo" class="btn btn-success">
             <i class="fa fa-plus"></i> Cadastrar Tipo
         </a>
+
+        <hr>
+
+        <h5 class="text-center">Lista de Tipos</h5>
+          
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
+                  //Percorrer a lista de tipos enviados pelo banco
+                  //Exibir na tabela
+                  foreach($tipos as $t){
+                ?>
+                    <tr>
+                        <th scope="row"><?php echo $t['idTipo']; ?></th>
+                        <th scope="row"><?php echo $t['descTipo']; ?></th>
+                        <th scope="row"><?php echo $t['obsTipo']; ?></th>
+                        <th scope="row"></th>
+                    </tr>
+                <?php
+                  }
+                ?>
+            </tbody>
+        </table>
+
         <hr>
         <?php include"footer.php"; ?>
     </div>

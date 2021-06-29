@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -16,7 +17,7 @@
         <hr>
         <?php include"nav.php"; ?>
         <hr>
-        <form action="fim-cad-tipo.php" method="post">
+        <form action="fim-cad-tipo.php?p=fim-cad-tipo" method="post">
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
