@@ -62,7 +62,14 @@
                         <th scope="row"><?php echo $t['idTipo']; ?></th>
                         <th scope="row"><?php echo $t['descTipo']; ?></th>
                         <th scope="row"><?php echo $t['obsTipo']; ?></th>
-                        <th scope="row"></th>
+                        <th scope="row">
+                            <a href="edit-tipo.php" class="btn btn-info">
+                              <i class="fa fa-edit"></i> Editar
+                            </a>
+                            <a href="del-tipo.php" class="btn btn-danger">
+                                <i class="fa fa-trash"></i> Excluir
+                            </a>
+                        </th>
                     </tr>
                 <?php
                   }
